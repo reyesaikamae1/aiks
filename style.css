@@ -1,0 +1,1233 @@
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Trebuchet MS", sans-serif;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 20% 20%, #ffd6e7 0%, transparent 25%),
+        radial-gradient(circle at 80% 20%, #d9d2ff 0%, transparent 25%),
+        radial-gradient(circle at 50% 90%, #ffe4b8 0%, transparent 30%),
+        linear-gradient(
+            135deg,
+            #fff1f7,
+            #f5efff,
+            #effcff
+        );
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+h1 {
+
+    color: #d36b9a;
+
+    font-family: Georgia, serif;
+
+    font-size: 34px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+
+    text-shadow:
+        2px 2px 0 #ffffff;
+}
+
+
+.subtitle {
+
+    color: #9a7aa7;
+
+    font-size: 15px;
+
+    margin-bottom: 12px;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   BOUQUET
+========================= */
+
+.bouquet {
+
+    width: 500px;
+
+    height: 580px;
+
+    position: relative;
+
+    margin: auto;
+}
+
+
+/* =========================
+   LEAVES
+========================= */
+
+.leaf {
+
+    position: absolute;
+
+    width: 25px;
+
+    height: 75px;
+
+    background: #9bc5a0;
+
+    border-radius:
+        100% 0
+        100% 0;
+
+    transform-origin: bottom;
+
+    opacity: .9;
+}
+
+
+.leaf1 {
+
+    left: 80px;
+    top: 180px;
+
+    transform: rotate(-40deg);
+}
+
+
+.leaf2 {
+
+    left: 110px;
+    top: 130px;
+
+    transform: rotate(-20deg);
+}
+
+
+.leaf3 {
+
+    right: 80px;
+    top: 180px;
+
+    transform: rotate(40deg);
+}
+
+
+.leaf4 {
+
+    right: 110px;
+    top: 130px;
+
+    transform: rotate(20deg);
+}
+
+
+.leaf5 {
+
+    left: 155px;
+    top: 100px;
+
+    transform: rotate(-50deg);
+}
+
+
+.leaf6 {
+
+    right: 155px;
+    top: 100px;
+
+    transform: rotate(50deg);
+}
+
+
+/* =========================
+   LILIES
+========================= */
+
+.lily {
+
+    width: 125px;
+
+    height: 125px;
+
+    position: absolute;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    animation: flowerFloat 4s ease-in-out infinite;
+}
+
+
+.lily-petal {
+
+    position: absolute;
+
+    width: 48px;
+
+    height: 100px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffb7d0,
+            #eaa7e5
+        );
+
+    border-radius:
+        70% 30%
+        70% 30%;
+
+    transform-origin: bottom center;
+
+    box-shadow:
+        inset 3px 3px 5px
+        rgba(255,255,255,.5);
+}
+
+
+.lily-petal:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+.lily-petal:nth-child(2) {
+    transform: rotate(60deg);
+}
+
+.lily-petal:nth-child(3) {
+    transform: rotate(120deg);
+}
+
+.lily-petal:nth-child(4) {
+    transform: rotate(180deg);
+}
+
+.lily-petal:nth-child(5) {
+    transform: rotate(240deg);
+}
+
+.lily-petal:nth-child(6) {
+    transform: rotate(300deg);
+}
+
+
+.lily-center {
+
+    width: 20px;
+
+    height: 20px;
+
+    background: #ffd36b;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    z-index: 5;
+
+    box-shadow:
+        0 0 5px #fff;
+}
+
+
+.lily1 {
+
+    left: 185px;
+
+    top: 45px;
+
+    transform: scale(1.1);
+}
+
+
+.lily2 {
+
+    right: 90px;
+
+    top: 125px;
+
+    transform: scale(.75);
+
+    animation-delay: 1s;
+}
+
+
+/* =========================
+   TULIPS
+========================= */
+
+.tulip {
+
+    position: absolute;
+
+    width: 90px;
+
+    height: 120px;
+
+    animation:
+        flowerFloat 3.5s
+        ease-in-out infinite;
+}
+
+
+.tulip-petal {
+
+    position: absolute;
+
+    width: 45px;
+
+    height: 75px;
+
+    top: 5px;
+
+    border-radius:
+        50% 50%
+        45% 45%;
+
+    box-shadow:
+        inset 3px 3px 7px
+        rgba(255,255,255,.35);
+}
+
+
+.tulip-middle {
+
+    position: absolute;
+
+    width: 43px;
+
+    height: 78px;
+
+    left: 24px;
+
+    top: 3px;
+
+    border-radius:
+        50% 50%
+        45% 45%;
+
+    z-index: 3;
+}
+
+
+.tulip-petal:first-child {
+
+    left: 3px;
+
+    transform: rotate(-18deg);
+}
+
+
+.tulip-petal:nth-child(2) {
+
+    right: 3px;
+
+    transform: rotate(18deg);
+}
+
+
+/* Tulip Colors */
+
+.tulip-pink {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff9fbd,
+            #ffbfd2
+        );
+}
+
+
+.tulip-yellow {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd45e,
+            #ffe99b
+        );
+}
+
+
+.tulip-purple {
+
+    background:
+        linear-gradient(
+            135deg,
+            #c8a5ef,
+            #e3cfff
+        );
+}
+
+
+.tulip-blue {
+
+    background:
+        linear-gradient(
+            135deg,
+            #9edcf2,
+            #c7efff
+        );
+}
+
+
+.stem {
+
+    position: absolute;
+
+    width: 7px;
+
+    height: 75px;
+
+    background: #7eaa7b;
+
+    left: 42px;
+
+    top: 75px;
+
+    border-radius: 10px;
+
+    z-index: -1;
+}
+
+
+/* Tulip Positions */
+
+.tulip1 {
+
+    left: 75px;
+
+    top: 125px;
+
+    transform: rotate(-15deg);
+}
+
+
+.tulip2 {
+
+    left: 160px;
+
+    top: 155px;
+
+    transform: scale(.8);
+
+    animation-delay: .5s;
+}
+
+
+.tulip3 {
+
+    right: 70px;
+
+    top: 135px;
+
+    transform: rotate(15deg);
+
+    animation-delay: 1s;
+}
+
+
+.tulip4 {
+
+    left: 110px;
+
+    top: 215px;
+
+    transform: scale(.7);
+
+    animation-delay: 1.5s;
+}
+
+
+/* =========================
+   DAISIES
+========================= */
+
+.daisy {
+
+    width: 90px;
+
+    height: 90px;
+
+    position: absolute;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    animation:
+        flowerFloat 4s
+        ease-in-out infinite;
+}
+
+
+.daisy .petal {
+
+    position: absolute;
+
+    width: 27px;
+
+    height: 47px;
+
+    background: #fff;
+
+    border-radius: 50%;
+
+    transform-origin:
+        center 44px;
+}
+
+
+.daisy .petal:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+.daisy .petal:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.daisy .petal:nth-child(3) {
+    transform: rotate(90deg);
+}
+
+.daisy .petal:nth-child(4) {
+    transform: rotate(135deg);
+}
+
+.daisy .petal:nth-child(5) {
+    transform: rotate(180deg);
+}
+
+.daisy .petal:nth-child(6) {
+    transform: rotate(225deg);
+}
+
+.daisy .petal:nth-child(7) {
+    transform: rotate(270deg);
+}
+
+.daisy .petal:nth-child(8) {
+    transform: rotate(315deg);
+}
+
+
+.daisy-center {
+
+    width: 25px;
+
+    height: 25px;
+
+    background: #ffd75f;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    z-index: 5;
+
+    box-shadow:
+        0 0 5px #fff;
+}
+
+
+/* Daisy Positions */
+
+.daisy1 {
+
+    left: 155px;
+
+    top: 205px;
+
+    transform: scale(.9);
+}
+
+
+.daisy2 {
+
+    right: 95px;
+
+    top: 225px;
+
+    transform: scale(.75);
+
+    animation-delay: 1s;
+}
+
+
+.daisy3 {
+
+    left: 55px;
+
+    top: 245px;
+
+    transform: scale(.65);
+
+    animation-delay: 1.5s;
+}
+
+
+/* =========================
+   SMALL FLOWERS
+========================= */
+
+.small-flower {
+
+    position: absolute;
+
+    font-size: 30px;
+
+    animation:
+        flowerFloat 3s
+        ease-in-out infinite;
+}
+
+
+.small1 {
+
+    left: 130px;
+
+    top: 270px;
+}
+
+
+.small2 {
+
+    right: 125px;
+
+    top: 275px;
+
+    animation-delay: .8s;
+}
+
+
+.small3 {
+
+    left: 205px;
+
+    top: 300px;
+
+    animation-delay: 1s;
+}
+
+
+.small4 {
+
+    right: 190px;
+
+    top: 300px;
+
+    animation-delay: 1.5s;
+}
+
+
+/* =========================
+   WRAPPING PAPER
+========================= */
+
+.wrapper {
+
+    position: absolute;
+
+    width: 320px;
+
+    height: 230px;
+
+    left: 90px;
+
+    bottom: 45px;
+
+    z-index: 10;
+
+    clip-path:
+        polygon(
+            5% 0,
+            95% 0,
+            75% 100%,
+            25% 100%
+        );
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffc8dc,
+            #e6d2ff,
+            #c9efff,
+            #ffe1b5
+        );
+
+    border: 3px solid
+        rgba(255,255,255,.8);
+}
+
+
+.wrapper-pattern {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.5) 3px,
+            transparent 4px
+        );
+
+    background-size: 25px 25px;
+
+    opacity: .6;
+}
+
+
+/* =========================
+   BIG BOW
+========================= */
+
+.big-bow {
+
+    position: absolute;
+
+    width: 150px;
+
+    height: 100px;
+
+    bottom: 5px;
+
+    left: 175px;
+
+    z-index: 20;
+}
+
+
+.bow-left,
+.bow-right {
+
+    position: absolute;
+
+    width: 75px;
+
+    height: 55px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff9fbe,
+            #e7a8e9
+        );
+
+    border:
+        3px solid
+        rgba(255,255,255,.6);
+
+    box-shadow:
+        0 5px 10px
+        rgba(160,100,150,.15);
+}
+
+
+.bow-left {
+
+    left: 0;
+
+    border-radius:
+        80% 20%
+        80% 20%;
+
+    transform:
+        rotate(12deg);
+}
+
+
+.bow-right {
+
+    right: 0;
+
+    border-radius:
+        20% 80%
+        20% 80%;
+
+    transform:
+        rotate(-12deg);
+}
+
+
+.bow-center {
+
+    position: absolute;
+
+    width: 35px;
+
+    height: 35px;
+
+    left: 57px;
+
+    top: 10px;
+
+    background: #e88eb2;
+
+    border-radius: 50%;
+
+    z-index: 5;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 20px;
+}
+
+
+.ribbon-left,
+.ribbon-right {
+
+    position: absolute;
+
+    width: 30px;
+
+    height: 80px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f7b2ca,
+            #dba9ec
+        );
+
+    top: 35px;
+
+    border-radius: 5px;
+}
+
+
+.ribbon-left {
+
+    left: 45px;
+
+    transform: rotate(10deg);
+}
+
+
+.ribbon-right {
+
+    right: 45px;
+
+    transform: rotate(-10deg);
+}
+
+
+/* =========================
+   MESSAGE CARD
+========================= */
+
+.message-card {
+
+    position: absolute;
+
+    z-index: 30;
+
+    bottom: 45px;
+
+    left: 165px;
+
+    width: 170px;
+
+    padding: 12px;
+
+    background: #fffdf9;
+
+    border:
+        2px dashed #e6a6c0;
+
+    border-radius: 12px;
+
+    color: #b36b8c;
+
+    transform:
+        rotate(-3deg)
+        translateY(90px);
+
+    box-shadow:
+        0 5px 15px
+        rgba(150,100,130,.15);
+
+    transition: .5s;
+}
+
+
+.message-card.show {
+
+    transform:
+        rotate(-3deg)
+        translateY(0);
+}
+
+
+.card-heart {
+
+    font-size: 22px;
+
+    color: #f28eb3;
+
+    margin-bottom: 4px;
+}
+
+
+.message-card p {
+
+    font-family: Georgia, serif;
+
+    font-size: 14px;
+}
+
+
+.message-card small {
+
+    font-size: 11px;
+
+    color: #9d8ba5;
+}
+
+
+/* =========================
+   HEARTS
+========================= */
+
+.heart {
+
+    position: absolute;
+
+    font-size: 25px;
+
+    animation:
+        heartFloat 3s
+        ease-in-out infinite;
+}
+
+
+.heart1 {
+
+    top: 50px;
+
+    left: 40px;
+}
+
+
+.heart2 {
+
+    top: 90px;
+
+    right: 25px;
+
+    animation-delay: 1s;
+}
+
+
+.heart3 {
+
+    bottom: 150px;
+
+    left: 20px;
+
+    animation-delay: 2s;
+}
+
+
+@keyframes heartFloat {
+
+    0%, 100% {
+        transform: translateY(0)
+                   rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-15px)
+                   rotate(5deg);
+    }
+}
+
+
+/* =========================
+   BACKGROUND DECORATIONS
+========================= */
+
+.cloud {
+
+    position: fixed;
+
+    font-size: 55px;
+
+    opacity: .45;
+}
+
+
+.cloud1 {
+
+    top: 10%;
+
+    left: 8%;
+}
+
+
+.cloud2 {
+
+    top: 18%;
+
+    right: 8%;
+}
+
+
+.butterfly {
+
+    position: fixed;
+
+    font-size: 30px;
+
+    animation:
+        butterflyMove 6s
+        ease-in-out infinite;
+}
+
+
+.butterfly1 {
+
+    left: 8%;
+
+    bottom: 20%;
+}
+
+
+.butterfly2 {
+
+    right: 8%;
+
+    top: 40%;
+
+    animation-delay: 2s;
+}
+
+
+@keyframes butterflyMove {
+
+    0%, 100% {
+        transform:
+            translateY(0)
+            rotate(-5deg);
+    }
+
+    50% {
+        transform:
+            translateY(-25px)
+            rotate(5deg);
+    }
+}
+
+
+/* =========================
+   SPARKLES
+========================= */
+
+.sparkle {
+
+    position: fixed;
+
+    color: #d69ac0;
+
+    font-size: 25px;
+
+    animation:
+        sparkle 2s
+        ease-in-out infinite;
+}
+
+
+.sparkle1 {
+
+    top: 25%;
+
+    left: 20%;
+}
+
+
+.sparkle2 {
+
+    top: 30%;
+
+    right: 20%;
+
+    animation-delay: .5s;
+}
+
+
+.sparkle3 {
+
+    bottom: 20%;
+
+    right: 25%;
+
+    animation-delay: 1s;
+}
+
+
+@keyframes sparkle {
+
+    0%, 100% {
+        opacity: .3;
+
+        transform:
+            scale(.8)
+            rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+
+        transform:
+            scale(1.3)
+            rotate(20deg);
+    }
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+
+    border: none;
+
+    padding: 13px 30px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff9fbd,
+            #c7a5ed,
+            #91d8ef
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 20px
+        rgba(180,120,170,.25);
+
+    transition: .3s;
+}
+
+
+button:hover {
+
+    transform:
+        scale(1.08)
+        rotate(-2deg);
+
+    box-shadow:
+        0 10px 25px
+        rgba(180,120,170,.35);
+}
+
+
+.footer {
+
+    margin-top: 10px;
+
+    color: #aa8fae;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   FLOWER ANIMATION
+========================= */
+
+@keyframes flowerFloat {
+
+    0%, 100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -7px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+    .bouquet {
+        transform: scale(.7);
+
+        transform-origin:
+            top center;
+
+        margin-bottom: -150px;
+    }
+
+    .cloud {
+        display: none;
+    }
+
+}
